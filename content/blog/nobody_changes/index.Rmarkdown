@@ -1,0 +1,58 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Nobody (really) changes"
+subtitle: ""
+summary: ""
+authors: []
+tags: []
+categories: []
+date: 2020-02-12T14:28:09-05:00
+lastmod: 2020-02-12T14:28:09-05:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In my forthcoming *American Sociological Review* paper with Steve Vaisey, we look for evidence that people make persisting changes in attitudes and behaviors in the General Social Survey. We present one approach to measuring persistence in the paper, but we tested many approaches throughout the project. Over the next couple weeks I want go through some of the approaches we tried. And I'll show how different approaches all produce the same result we find in the paper: persisting change in any kind of attitude is extremely rare in American adults.
+
+Our paper argues that, at the individual level, people follow one of two models of attitude formation: a settled dispositions model, in which changes are temporary and people revert to their baseline, and an active updating model, in which changes persist.
+
+One way to compare the prevalence of these two models is to simply count whether we see more people whose response patterns resemble persistent change than we would expect under the settled dispositions model. For a simple example, consider one of the seven GSS questions about conditions under which people support legal access to abortion: "Please tell me whether or not you think it should be possible for a pregnant woman to obtain a legal abortion if the woman wants it for any reason." Respondents could select "yes" or "no" as responses.
+
+Under the active updating model, a person who changed from saying "yes" at wave 1 to "no" at wave 2 should say "no" again at wave 3. Under the settled dispositions model, we should view it as equally likely that wave 1 or wave 2 is a temporary departure from the person's baseline. As a result, we should guess that 50 percent of the time people who give different responses at waves 1 and 2 would say "yes" at wave 3 and 50 percent of the time they say "no." In other words, we see people who look to be persisting simply because their wave 1 response was a temporary departure from their baseline.
+
+Of the 2,297 people who responded to the abortion question over three waves, 424 gave different answers in waves 1 and 2. Under the settled dispositions model, in which deviations are equally likely in each wave, we would expect that 212 people would appear to be making persisting changes even when they are not, simply because of the three-wave structure.
+
+What we see is that 227 people show a pattern of persistence, or just 15 more than expected if the settled dispositions model generated the data. That is not a lot of people. It's less than 1 percent of the total sample. So already we can say that persisting change in this item is substantively rare.
+
+Is that enough people to say that we see some evidence of persistence in the population? Would it be unusual to get that many people displaying evidence of persistence if there is no persistence in the population?
+
+A simple calculation of confidence interval for the proportion of changers persisting, where we use the number of people who change (424) as the sample size, gives us a 95 percent confidence interval of [.487, .582], which includes 50 percent, meaning it is quite plausible that we get this value even if nobody is making any persistent change in the population. 
+
+The figure below shows estimates for the percent of the population changing, the percent of changers persisting, and, using those two values, the percent of the population making a persistent change, for the seven binary questions about abortion.
+
+![Test plot](abortion_plot.pdf)
+
+
+
+
+
